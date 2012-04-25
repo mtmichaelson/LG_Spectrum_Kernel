@@ -448,7 +448,7 @@ static struct regulator_init_data saw_s0_init_data = {
 		.constraints = {
 			.valid_ops_mask = REGULATOR_CHANGE_VOLTAGE,
 			.min_uV = 800000,
-			.max_uV = 1350000,
+			.max_uV = 1450000,
 		},
 		.num_consumer_supplies = 1,
 		.consumer_supplies = &saw_s0_supply,
@@ -458,7 +458,7 @@ static struct regulator_init_data saw_s1_init_data = {
 		.constraints = {
 			.valid_ops_mask = REGULATOR_CHANGE_VOLTAGE,
 			.min_uV = 800000,
-			.max_uV = 1350000,
+			.max_uV = 1450000,
 		},
 		.num_consumer_supplies = 1,
 		.consumer_supplies = &saw_s1_supply,
@@ -5020,9 +5020,9 @@ RPM_VREG_INIT_LDO_PF(PM8058_L0,  0, 1, 0, 1200000, 1200000, LDO150HMIN,RPM_VREG_
 	RPM_VREG_INIT_LDO(PM8058_L24, 0, 1, 0, 1200000, 1200000, LDO150HMIN, 0),	/*4.7uF CAP - GND*/
 	RPM_VREG_INIT_LDO(PM8058_L25, 0, 1, 0, 1200000, 1200000, LDO150HMIN, 0),	/*4.7uF CAP - GND*/
 
-	RPM_VREG_INIT_SMPS(PM8058_S0, 0, 1, 1,  500000, 1350000,  SMPS_HMIN, 0,
+	RPM_VREG_INIT_SMPS(PM8058_S0, 0, 1, 1,  500000, 1450000,  SMPS_HMIN, 0,
 		RPM_VREG_FREQ_1p60),
-	RPM_VREG_INIT_SMPS(PM8058_S1, 0, 1, 1,  500000, 1350000,  SMPS_HMIN, 0,
+	RPM_VREG_INIT_SMPS(PM8058_S1, 0, 1, 1,  500000, 1450000,  SMPS_HMIN, 0,
 		RPM_VREG_FREQ_1p60),
 	RPM_VREG_INIT_SMPS(PM8058_S2, 0, 1, 1, 1200000, 1400000,  SMPS_HMIN,
 		RPM_VREG_PIN_CTRL_A0, RPM_VREG_FREQ_1p60),
@@ -10385,7 +10385,7 @@ static unsigned int bcm432x_sdcc_wlan_slot_status(struct device *dev)
 }
 
 static struct mmc_platform_data bcm432x_sdcc_wlan_data = {
-    .ocr_mask   	= MMC_VDD_30_31,
+    .ocr_mask   	= MMC_VDD_26_27,
     .translate_vdd	= msm_sdcc_setup_power,
     .mmc_bus_width	= MMC_CAP_4_BIT_DATA,
     .status     	= bcm432x_sdcc_wlan_slot_status,
