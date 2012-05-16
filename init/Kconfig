@@ -1132,7 +1132,7 @@ config SLUB
 config SLQB
 	bool "SLQB (Queued allocator)"
 	help
-	  SLQB is a proposed new slab allocator.
+	   SLQB is a proposed new slab allocator.
 
 config SLOB
 	depends on EMBEDDED
