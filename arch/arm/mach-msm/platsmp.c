@@ -26,7 +26,6 @@
 #include "pm.h"
 #include "scm-boot.h"
 
-
 int pen_release = -1;
 
 static inline int get_core_count(void)

@@ -853,7 +853,6 @@ config USB_G_PRINTER
 config USB_ANDROID
 	boolean "Android Gadget"
 	depends on SWITCH
-	default y
 	help
 	  The Android gadget driver supports multiple USB functions.
 	  The functions can be configured via a board file and may be
@@ -1159,7 +1158,6 @@ config USB_G_WEBCAM
 
 config USB_QCOM_MAEMO
         tristate "Qcom gadget compositon for Maemo"
-        default n
 	select MODEM_SUPPORT
 	select USB_CSW_HACK
 	help
@@ -1352,7 +1350,7 @@ config LGE_USB_GADGET_F_DIAG_RPC
 
 # LGE_CHANGE_S [jaeho.cho@lge.com] 2011-04-23
 config LGE_DIAGTEST
-        tristate "Support LGE diag test mode"
+        boolean "Support LGE diag test mode"
         default n
         depends on MACH_LGE
         select LGE_SUPPORT_RAPI

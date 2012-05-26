@@ -107,14 +107,12 @@ choice
 	depends on LGE_TOUCHSCREEN_SYNAPTICS_RMI4_I2C
 
 config LGE_TOUCH_REG_MAP_TM1804
-	default y
 	bool "TM1804"
 	depends on LGE_TOUCHSCREEN_SYNAPTICS_RMI4_I2C && (LGE_MACH_BOARD_REVB || LGE_MACH_BOARD_REVC)
 	help
          Register map TM1804. 
 
 config LGE_TOUCH_REG_MAP_TM1814
-	default y
 	bool "TM1814"
 	depends on LGE_TOUCHSCREEN_SYNAPTICS_RMI4_I2C && LGE_MACH_BOARD_REVA
 	help
